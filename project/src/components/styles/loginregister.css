@@ -1,0 +1,80 @@
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(C:\Users\user\CascadeProjects\charlesdevera-bsit3a\public\bg.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    z-index: -1;
+    overflow: auto; /* Allows scrolling if content exceeds container height */
+}
+
+.auth-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+.auth-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+    text-decoration: none;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
