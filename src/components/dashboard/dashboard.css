@@ -1,0 +1,134 @@
+.dashboard {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: url('/1.avif') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg, 
+        rgba(50, 50, 50, 0.7) 0%, 
+        rgba(218, 165, 32, 0.2) 50%, 
+        rgba(50, 50, 50, 0.7) 100%
+    );
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+.top-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: rgba(218, 165, 32, 0.9);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    perspective: 1000px;
+}
+
+.nav-links span {
+    color: #333;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(184, 134, 11, 0.2);
+    transition: left 0.3s ease;
+}
+
+.nav-links span.active {
+    background: #B8860B;
+    color: white;
+}
+
+.nav-links span.active::before {
+    left: 0;
+}
+
+.logout-button-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-button, .cancel-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logout-button {
+    background: #DAA520;
+    color: #333;
+}
+
+.logout-button.confirm {
+    background: #B8860B;
+    color: white;
+}
+
+.cancel-button {
+    background: #666;
+    color: white;
+}
+
+.bottom-panel {
+    /*background: rgba(240, 240, 240, 0.9);*/
+    position: relative;
+    z-index: 2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    overflow: hidden;
+}
+
+.content-container {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .top-panel {
+        padding: 0.5rem 1rem;
+    }
+}
