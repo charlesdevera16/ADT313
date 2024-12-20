@@ -1,0 +1,100 @@
+.admin-movies-container {
+	min-height: 100vh;
+	background: url(/public/1.avif) no-repeat center center fixed;
+	background-size: cover;
+	position: relative;
+	overflow-y: auto;
+	padding-bottom: 2rem;
+}
+
+.admin-movies-container::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		45deg, 
+		rgba(50, 50, 50, 0.7) 0%, 
+		rgba(218, 165, 32, 0.2) 50%, 
+		rgba(50, 50, 50, 0.7) 100%
+	);
+	z-index: 1;
+}
+
+.logout-container {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	z-index: 10;
+	display: flex;
+	gap: 1rem;
+	padding: 0.5rem;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 25px;
+}
+
+.logout-container button {
+	padding: 0.75rem 1.5rem;
+	border: none;
+	border-radius: 25px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.logout-container button.danger {
+	background: #DAA520;
+	color: #333;
+}
+
+.logout-container button.danger:hover {
+	background: #B8860B;
+	color: white;
+}
+
+.logout-container button.success {
+	background: #B8860B;
+	color: white;
+}
+
+.logout-container button.secondary {
+	background: #666;
+	color: white;
+}
+
+.admin-movies-content {
+	position: relative;
+	z-index: 2;
+	padding: 4rem 2rem 2rem;
+	color: white;
+}
+
+.admin-movies-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.admin-movies-details-content {
+	position: relative;
+	z-index: 2;
+	padding: 4rem 2rem 2rem;
+	height: auto;
+	min-height: calc(100vh - 2rem);
+}
+
+
+.admin-movies-container::-webkit-scrollbar {
+	display: none;
+}
+
+
+.admin-movies-container {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
